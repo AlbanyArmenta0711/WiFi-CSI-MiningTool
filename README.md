@@ -11,11 +11,8 @@ Los scripts y datasets presentados en este repositorio tienen el propósito de s
 * Breathing and heart rate CSI amplitude data from 17 test subjects using the Linux 802.11n CSI Tool at different breathing rates.
 * Breathing and heart rate dataset with 161 features and one extra column for ground-truth value.
 
-## What You Will Need
-
-## How It Works
-
 ## Usage
+### The MATLAB App 
 
 ## Contact
 **Jesus A. Armenta-Garcia**  
