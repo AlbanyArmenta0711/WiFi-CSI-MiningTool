@@ -12,6 +12,5 @@ Scripts and datasets for mining Wi-Fi CSI mainly for breathing rate monitoring b
 ## Usage
 
 ## Contact
-**Jesus A. Armenta-Garcia**
-
+**Jesus A. Armenta-Garcia**  
 Email: albany.armenta@uabc.edu.mx
