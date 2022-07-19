@@ -2,7 +2,7 @@
 Scripts and datasets for mining Wi-Fi CSI mainly for breathing rate monitoring but it can be customized and extended for any other CSI-based application.
 
 ## Purpose
-Los scripts y datasets presentados en este repositorio tienen el propósito de ser una herramienta de ayuda para investigadores del área de desarrollo de aplicaciones de detección inalámbrica al proporcionar una interfaz gráfica para la carga y procesamiento de datos de CSI recolectados utilizando la herramienta [Linux 802.11n CSI Tool](https://dhalperi.github.io/linux-80211n-csitool/).
+Los scripts y datasets presentados en este repositorio tienen el propósito de ser una herramienta de ayuda para investigadores del área de desarrollo de aplicaciones de detección inalámbrica al proporcionar una interfaz gráfica para la carga y procesamiento de datos de CSI recolectados utilizando la herramienta [Linux 802.11n CSI Tool](https://dl.acm.org/doi/10.1145/1925861.1925870).
 
 ## What You Will Find
 * MATLAB scripts and app for processing CSI data for breathing and heart rate monitoring from files and for monitoring breathing rate using a K-NN trained model.
@@ -26,11 +26,11 @@ Once *Process File* button is clicked, file will be processed and time and frequ
 
 ![From File Operation Mode](Images/Process_File.PNG)
 
-The other operation mode is *Real-Time Monitor*. This operation mode presents an example of how a real-time CSI-based sensing application could be providing information about the current breathing rate of a person. It operates using a plugin developed by [Bingxian et al.](https://github.com/lubingxian/Realtime-processing-for-csitool) that allows to log CSI data to a server instead of to a file, applying the processing steps as data comes by as well as breathing classification using the model that can be found in Scripts directory.  
+The other operation mode is *Real-Time Monitor*. This operation mode presents an example of how a real-time CSI-based sensing application could be providing information about the current breathing rate of a person. It operates using a plugin developed by [Bingxian et al.](https://ieeexplore.ieee.org/document/7732975) that allows to log CSI data to a server instead of to a file, applying the processing steps as data comes by as well as breathing classification using the model that can be found in Scripts directory. Please take a look at their [repository](https://github.com/lubingxian/Realtime-processing-for-csitool) for instructions of how to execute their scripts on the Wi-Fi devices. 
 
 ![Real-Time Monitor Operation Mode](Images/RealTime.png)
 
-### Feature Extractor and Classification Model
+### Feature Extraction and Classification Model
 As mentioned before, time and frequency domain features are extracted from CSI amplitude for creating an observation with a total of 161 features.  This features and their order in the presented table are: 
 * Columns 1-10: standard deviation of Level 1 Discrete Wavelet Transform detail coefficients.
 * Columns 11-20: standard deviation of Level 2 Discrete Wavelet Transform detail coefficients.
@@ -49,7 +49,10 @@ mean of subcarriers' amplitude.
 * Columns 131-140: skewness of subcarriers' amplitude.
 * Columns 141-150: frequency with highest magnitude for each subcarrier.
 * Columns 151-160: standard deviation of frequency spectrum.
-* Column 161: breathing rate estimation based on frequency analysis.
+* Column 161: breathing rate estimation based on frequency analysis.  
+
+The K-NN classification model found in this repository follows this same structure as model training was done with data exported from this app. 
+
 **NOTES:**
 * Only CSI amplitude of 10 subcarriers are used for reducing computational complexity and for improving the classification performance by only using subcarriers with relevant information.
 
