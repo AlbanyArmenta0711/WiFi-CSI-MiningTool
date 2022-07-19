@@ -19,13 +19,32 @@ The MATLAB app has two operation modes. The first one is *From File* processing,
 * **Savitzky-Golay Filter:** polynomial degree and window size.
 
 Once *Process File* button is clicked, file will be processed and time and frequency domain features will be extracted for building breathing or heart rate observations that will be shown in screen in table format. This table can be exported to a CSV file that will be located in the same directory where the MATLAB app is located. *Predict!* button will also become available. This button opens a file explorer and allows to load a classification model exported from [Classification Learner MATLAB App](https://la.mathworks.com/help/stats/classificationlearner-app.html), classifying each observation shown in the table according to the loaded model, adding another column to the table that corresponds to the model response. This table with the column added can be also exported.  
-![From File Operation Mode](Images/Process_File.PNG)
 
 **NOTES:** 
 * Before processing the file, please specify the packet rate defined for the Wi-Fi devices packet sending (sample frequency) and the window length of data to use (in seconds, this for applying FFT to data and frequency-domain feature extraction).
 * It is highly recommended to use exported csv files created with this operation mode for creating the classification model in order to guarantee compatibility.  
 
-The other operation mode is *Real-Time Monitor*. This operation mode presents an example of how a real-time CSI-based sensing application could be providing information about the current breathing rate of a person. It operates using a plugin developed by [Bingxian et al.](https://github.com/lubingxian/Realtime-processing-for-csitool) that allows to log CSI data to a server instead of to a file, applying the processing steps as data comes by as well as breathing classification using the model that can be found in Scripts directory.
+![From File Operation Mode](Images/Process_File.PNG)
+
+The other operation mode is *Real-Time Monitor*. This operation mode presents an example of how a real-time CSI-based sensing application could be providing information about the current breathing rate of a person. It operates using a plugin developed by [Bingxian et al.](https://github.com/lubingxian/Realtime-processing-for-csitool) that allows to log CSI data to a server instead of to a file, applying the processing steps as data comes by as well as breathing classification using the model that can be found in Scripts directory.  
+
+![Real-Time Monitor Operation Mode](Images/RealTime.png)
+
+### Feature Extractor and Classification Model
+As mentioned before, time and frequency domain features are extracted from CSI amplitude for creating an observation with a total of 161 features.  This features and their order in the presented table are: 
+* Columns 1-10: standard deviation of Level 1 Discrete Wavelet Transform detail coefficients.
+* Columns 11-20: standard deviation of Level 2 Discrete Wavelet Transform detail coefficients.
+* Columns 21-30: standard deviation of Level 3 Discrete Wavelet Transform detail coefficients.
+* Columns 31-40: standard deviation of Level 4 Discrete Wavelet Transfrom detail coefficients.
+* Columns 41-50: mean of Level 1 Discrete Wavelet Transform detail coefficients.
+* Columns 51-60: mean of Level 2 Discrete Wavelet Transform detail coefficients.
+* Columns 61-70: mean of Level 3 Discrete Wavelet Transform detail coefficients.
+* Columns 71-80: mean of Level 4 Discrete Wavelet Transform detail coefficients.
+* Columns 81-90: mean of Discrete Wavelet Transform approximation coefficients.
+* Columns 91-100: variance of Discrete Wavelet Transform approximation coefficients.
+
+**NOTES:**
+* Only CSI amplitude of 10 subcarriers are used for reducing computational complexity and for improving the classification performance by only using subcarriers with relevant information.
 
 ## Contact 
 **Jesus A. Armenta-Garcia**  
