@@ -42,7 +42,14 @@ As mentioned before, time and frequency domain features are extracted from CSI a
 * Columns 71-80: mean of Level 4 Discrete Wavelet Transform detail coefficients.
 * Columns 81-90: mean of Discrete Wavelet Transform approximation coefficients.
 * Columns 91-100: variance of Discrete Wavelet Transform approximation coefficients.
-
+* Columns 101-110: 
+mean of subcarriers' amplitude. 
+* Columns 111-120: variance of subcarriers' amplitude.
+* Columns 121-130: kurtosis of subcarriers' amplitude.
+* Columns 131-140: skewness of subcarriers' amplitude.
+* Columns 141-150: frequency with highest magnitude for each subcarrier.
+* Columns 151-160: standard deviation of frequency spectrum.
+* Column 161: breathing rate estimation based on frequency analysis.
 **NOTES:**
 * Only CSI amplitude of 10 subcarriers are used for reducing computational complexity and for improving the classification performance by only using subcarriers with relevant information.
 
