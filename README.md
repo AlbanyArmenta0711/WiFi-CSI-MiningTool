@@ -2,7 +2,7 @@
 Scripts and datasets for mining Wi-Fi CSI mainly for breathing rate monitoring but it can be customized and extended for any other CSI-based application.
 
 ## Purpose
-Los scripts y datasets presentados en este repositorio tienen el propósito de ser una herramienta de ayuda para investigadores del área de desarrollo de aplicaciones de detección inalámbrica al proporcionar una interfaz gráfica para la carga y procesamiento de datos de CSI recolectados utilizando la herramienta [Linux 802.11n CSI Tool](https://dl.acm.org/doi/10.1145/1925861.1925870).
+The scripts and datasets presented in this repository have the purpose of being a tool for the scientific community specialized in the development or investigation of Wi-Fi CSI-based sensing applications by providing a MATLAB app for CSI data processing collected using the [Linux 802.11n CSI Tool](https://dl.acm.org/doi/10.1145/1925861.1925870).
 
 ## What You Will Find
 * MATLAB scripts and app for processing CSI data for breathing and heart rate monitoring from files and for monitoring breathing rate using a K-NN trained model.
