@@ -62,3 +62,7 @@ Email: albany.armenta@uabc.edu.mx
 
 **Felix F. Gonzalez-Navarro**  
 Email: fernando.gonzalez@uabc.edu.mx
+
+To cite this tool please refer to:
+J. A. Armenta-Garcia, F. F. Gonzalez-Navarro, J. Caro-Gutierrez, G. Galaviz-Yanez, J. E. Ibarra-Esquer, and W. Flores-Fuentes, “Mining Wi-Fi Channel State Information for breathing and heart rate classification,” Pervasive Mob. Comput., vol. 91, p. 101768, 2023, doi: https://doi.org/10.1016/j.pmcj.2023.101768.
+
