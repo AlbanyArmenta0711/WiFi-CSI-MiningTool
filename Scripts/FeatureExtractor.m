@@ -75,7 +75,6 @@ classdef FeatureExtractor < handle
                 ApproxMean(currentsc) = mean(approxNorm);
             end
             
-            build tdf
             tdf = [CD1Var CD2Var CD3Var CD4Var CD1Mean CD2Mean CD3Mean...
                CD4Mean ApproxMean ApproxVar meanSC varSC kurtSC...
                skwSC];
